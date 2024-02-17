@@ -26,3 +26,26 @@ button {
     color: #fff;
     border-radius: 5px;
 }
+
+#si {
+    transition: 1s;
+}
+
+#si:hover {
+    scale: 1.2;
+}
+
+.confeti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFD700; /* Color del confeti */
+    border-radius: 50%; /* Forma circular */
+    z-index: 1000; /* Asegura que el confeti esté sobre otros elementos */
+    animation: caida 3s linear; /* Animación de caída */
+}
+
+@keyframes caida {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); } /* Cae hasta el final de la pantalla */
+}

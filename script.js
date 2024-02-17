@@ -17,14 +17,12 @@ document.getElementById('no').addEventListener('mouseover', function() {
     var nuevoTamano = parseFloat(window.getComputedStyle(botonSi).fontSize) * 1.05; // Aumentar en un 5%
     botonSi.style.fontSize = nuevoTamano + 'px'; // Aplicar el nuevo tamaño al texto del botón
 
-    // Reducir el tamño del boton No    
+    // Reducir el tamaño del boton No    
     var nuevoAncho = botonNo.clientWidth * 0.9;
     var nuevoAlto = botonNo.clientHeight * 0.9;
     botonNo.style.width = nuevoAncho + 'px';
     botonNo.style.height = nuevoAlto + 'px';
-    botonNo.style.fontSize = parseFloat(window.getComputedStyle(botonNo).fontSize) * 0.9 + 'px';
-    botonNo.style.textAlign = 'center';
-    botonNo.style.lineHeight = botonNo.clientHeight + 'px';
+    botonNo.style.fontSize = parseFloat(window.getComputedStyle(botonNo).fontSize) * 0.75 + 'px';
 
     movimientosBoton++;
 
@@ -79,3 +77,34 @@ function mostrarFrase10() {
         contenedorFrases.appendChild(fraseElement2);
     }, 2000);
 }
+
+document.getElementById('si').addEventListener('click', function() {
+    // Array de colores para el confeti
+    const colores = ['#FFD700', '#FF6347', '#00FFFF', '#32CD32', '#9370DB', '#FFA500', '#FF1493', '#1E90FF', '#00FF00', '#FF69B4'];
+    
+    // Función para crear partículas de confeti
+    function crearConfeti() {
+        for (let i = 0; i < 100; i++) {
+            // Seleccionar un color aleatorio del array de colores
+            const color = colores[Math.floor(Math.random() * colores.length)];
+
+            // Crear elemento div para la partícula de confeti
+            const confeti = document.createElement('div');
+            confeti.classList.add('confeti');
+            confeti.style.backgroundColor = color; // Aplicar el color seleccionado al confeti
+            confeti.style.left = Math.random() * window.innerWidth + 'px';
+            confeti.style.top = -Math.random() * window.innerHeight + 'px';
+            confeti.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
+            document.body.appendChild(confeti);
+            setTimeout(() => {
+                confeti.remove();
+            }, 3000);
+        }
+        
+        // Llamar a la función de nuevo en el siguiente cuadro de animación
+        requestAnimationFrame(crearConfeti);
+    }
+    
+    // Iniciar la animación del confeti
+    crearConfeti();
+});
