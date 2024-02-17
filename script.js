@@ -79,6 +79,15 @@ function mostrarFrase10() {
 }
 
 document.getElementById('si').addEventListener('click', function() {
+    // Ocultar elementos existentes
+    document.querySelector('.contenedor').classList.add('hidden');
+
+    // Crear título "BIEEEEN!!"
+    const bien = document.createElement('h1');
+    bien.textContent = 'BIEEEEN!!';
+    bien.classList.add('bien');
+    document.body.appendChild(bien);
+
     // Array de colores para el confeti
     const colores = ['#FFD700', '#FF6347', '#00FFFF', '#32CD32', '#9370DB', '#FFA500', '#FF1493', '#1E90FF', '#00FF00', '#FF69B4'];
     

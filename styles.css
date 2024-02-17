@@ -12,7 +12,7 @@ body {
     text-align: center;
 }
 
-.botones {
+.buttons {
     margin-top: 20px;
 }
 
@@ -32,7 +32,16 @@ button {
 }
 
 #si:hover {
-    scale: 1.2;
+    transform: scale(1.2);
+}
+
+.hidden {
+    display: none;
+}
+
+.bien {
+    font-size: 48px;
+    margin-top: 20px;
 }
 
 .confeti {
