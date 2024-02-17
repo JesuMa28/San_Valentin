@@ -42,6 +42,27 @@ button {
 .bien {
     font-size: 48px;
     margin-top: 20px;
+    margin-bottom: 20px; /* Agregar margen inferior */
+    z-index: 10000;
+}
+
+#conejito {
+    width: 100px; /* Ajustar el tamaño del conejito según sea necesario */
+    position: fixed;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bailar 2s infinite alternate;
+    z-index: 10000;
+}
+
+@keyframes bailar {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(10deg);
+    }
 }
 
 .confeti {

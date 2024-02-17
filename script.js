@@ -84,9 +84,15 @@ document.getElementById('si').addEventListener('click', function() {
 
     // Crear título "BIEEEEN!!"
     const bien = document.createElement('h1');
-    bien.textContent = 'BIEEEEN!!';
+    bien.textContent = 'BIEEEEN NAZAN FELIIZ!!';
     bien.classList.add('bien');
     document.body.appendChild(bien);
+
+    // Crear elemento de conejito bailando
+    const conejito = document.createElement('img');
+    conejito.src = 'assets/conejito.gif'; // Reemplaza 'conejito.gif' con la ruta de tu imagen de conejito
+    conejito.id = 'conejito';
+    document.body.appendChild(conejito);
 
     // Array de colores para el confeti
     const colores = ['#FFD700', '#FF6347', '#00FFFF', '#32CD32', '#9370DB', '#FFA500', '#FF1493', '#1E90FF', '#00FF00', '#FF69B4'];
