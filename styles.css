@@ -27,11 +27,3 @@ button {
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
-
-button:hover {
-    transform: translateY(-5px);
-}
-
-#no:hover {
-    animation: moverBoton 2s infinite;
-}
