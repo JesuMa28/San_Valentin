@@ -84,7 +84,7 @@ document.getElementById('si').addEventListener('click', function() {
 
     // Crear título "BIEEEEN!!"
     const bien = document.createElement('h1');
-    bien.textContent = 'BIEEEEN NAZAN FELIIZ!!';
+    bien.textContent = 'BIEEEEN MAMI NAZAN FELIIZ!!';
     bien.classList.add('bien');
     document.body.appendChild(bien);
 
